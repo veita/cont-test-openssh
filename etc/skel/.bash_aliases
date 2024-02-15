@@ -1,6 +1,9 @@
 
 PS1='\[\033[01;33m\](container) \[\033[01;32m\]\u@\h\[\033[01;34m\] \w $\[\033[00m\] '
 
+git config --global user.name || git config --global user.name "${USER}"
+git config --global user.email || git config --global user.email "${USER}@container"
+
 eval "`dircolors`"
 
 alias ls='ls --time-style=long-iso --color=auto'
@@ -18,4 +21,3 @@ alias o='less -R'
 alias g="grep --exclude-dir .git --exclude-dir .svn --color=auto"
 alias grep="grep --exclude-dir .git --exclude-dir .svn --color=auto"
 alias dt="date --utc '+%Y-%m-%d %H:%M:%S UTC'"
-

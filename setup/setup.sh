@@ -27,7 +27,6 @@ useradd -m --uid ${UID_TESTER} tester
 mkdir /home/tester/.ssh
 chown tester:tester /home/tester/.ssh
 chmod 600 /home/tester/.ssh
-USER=tester /bin/bash /home/tester/configure-git.sh
 
 # global screen configuration
 sed -i 's|#startup_message off|startup_message off|g' /etc/screenrc
