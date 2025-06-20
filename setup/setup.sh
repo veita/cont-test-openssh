@@ -21,6 +21,11 @@ cp /setup/etc/ssh/* /etc/ssh/
 apt-get purge -qy systemd
 apt-get autoremove -qy
 
+# configure bash for root
+cat << EOF >> /root/.bashrc
+alias halt='kill -15 1'
+EOF
+
 # add test user
 UID_TESTER=1000
 useradd -m --uid ${UID_TESTER} tester
